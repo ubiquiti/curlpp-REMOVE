@@ -5,6 +5,6 @@
 
 override_dh_auto_configure:
 	./autogen.sh
-	LDFLAGS=-L/usr/$(DEB_HOST_GNU_TYPE)/lib ./configure --host=$(DEB_HOST_GNU_TYPE) --prefix=/usr
+	LDFLAGS=-L/usr/$(DEB_HOST_GNU_TYPE)/lib ./configure --host=$(DEB_HOST_GNU_TYPE) --prefix=/usr --disable-ewarning
 
 override_dh_shlibdeps:
